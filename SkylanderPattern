@@ -1,0 +1,634 @@
+#include <std/string.pat>
+
+enum HatID : u16 {
+    None = 0,
+    CombatHat = 1,
+    NapoleonHat = 2,
+    SpyGear = 3,
+    MinerHat = 4,
+    GeneralsHat = 5,
+    PirateHat = 6,
+    PropellorCap = 7,
+    CoonskinCap = 8,
+    StrawHat = 9,
+    FancyHat = 10,
+    TopHat = 11,
+    VikingHelmet = 12,
+    SpikedHat = 13,
+    AnvilHat = 14,
+    Beret = 15,
+    BirthdayHat = 16,
+    BoneHead = 17,
+    BowlerHat = 18,
+    WabbitEars = 19,
+    TropicalTurban = 20,
+    ChefHat = 21,
+    CowboyHat = 22,
+    RockerHair = 23,
+    RoyalCrown = 24,
+    LilDevil = 25,
+    EyeHat = 26,
+    Fez = 27,
+    CrownOfLight = 28,
+    JesterHat = 29,
+    WingedHat = 30,
+    MooseHat = 31,
+    PlungerHead = 32,
+    PanHat = 33,
+    RocketHat = 34,
+    SantaHat = 35,
+    TikiHat = 36,
+    TrojanHelmet = 37,
+    UnicornHat = 38,
+    WizardHat_SpyrosAdventure = 39,
+    PumpkinHat = 40,
+    PirateDooRag = 41,
+    CossackHat = 42,
+    FlowerHat = 43,
+    BalloonHat = 44,
+    HappyBirthday = 45,
+    VintageBaseballCap = 46,
+    UnusedHat47 = 47,
+    BowlingPinHat = 48,
+    OfficerCap = 49,
+    FirefighterHelmet = 50,
+    GraduationHat = 51,
+    LampshadeHat = 52,
+    MariachiHat = 53,
+    UnusedHat54 = 54,
+    PaperFastFoodHat = 55,
+    PilgrimHat = 56,
+    PoliceSirenHat = 57,
+    PurpleFedora = 58,
+    ArcherHat = 59,
+    UnusedHat60 = 60,
+    SafariHat = 61,
+    SailorHat = 62,
+    UnusedHat63 = 63,
+    DancerHat = 64,
+    TrafficConeHat = 65,
+    Turban = 66,
+    BattleHelmet = 67,
+    BottleCapHat = 68,
+    UnusedHat69 = 69,
+    CarrotHat = 70,
+    UnusedHat71 = 71,
+    ElfHat = 72,
+    FishingHat = 73,
+    FutureHat = 74,
+    Nefertiti = 75,
+    UnusedHat76 = 76,
+    PantsHat = 77,
+    PrincessHat = 78,
+    ToySoldierHat = 79,
+    TruckerHat = 80,
+    UmbrellaHat = 81,
+    ShowtimeHat = 82,
+    CeasarHat = 83,
+    FlowerFairyHat = 84,
+    FunnelHat = 85,
+    ScrumshanksHat = 86,
+    BiterHat = 87,
+    AtomHat = 88,
+    Sombrero = 89,
+    RastaHat = 90,
+    KufiHat = 91,
+    KnightHelm = 92,
+    DanglingCarrotHat = 93,
+    BronzeTopHat = 94,
+    SilverTopHat = 95,
+    GoldTopHat = 96,
+    RainHat = 97,
+    TheOutsider = 98,
+    GreebleHat = 99,
+    VolcanoHat = 100,
+    BoaterHat = 101,
+    StoneHat = 102,
+    StovepipeHat = 103,
+    BoonieHat = 104,
+    SawbladeHat = 105,
+    ZombeanieHat = 106,
+    GauchoHat = 107,
+    RoundletHat = 108,
+    Capuchon = 109,
+    TricornHat = 110,
+    FeatheredHeaddress = 111,
+    BearskinCap = 112,
+    FishboneHat = 113,
+    SkiCap = 114,
+    CrownOfFrost = 115,
+    FourWindsHat = 116,
+    BeaconHat = 117,
+    FlowerGarland = 118,
+    TreeBranch = 119,
+    AviatorsCap = 120,
+    AsteroidHat = 121,
+    CrystalHat = 122,
+    CreepyHelm = 123,
+    FancyRibbon = 124,
+    DeelyBoppers = 125,
+    Beanie = 126,
+    LeprechaunHat = 127,
+    SharkHat = 128,
+    LifePreserverHat = 129,
+    GlitteringTiara = 130,
+    GreatHelm = 131,
+    SpaceHelmet = 132,
+    UFOHat = 133,
+    WhirlwindDiadem = 134,
+    ObsidianHelm = 135,
+    LilypadHat = 136,
+    CrownOfFlames = 137,
+    RunicHeadband = 138,
+    ClockworkHat = 139,
+    CactusHat = 140,
+    Skullhelm = 141,
+    GloopHat = 142,
+    PumaHat = 143,
+    ElephantHat = 144,
+    TigerSkinCap = 145,
+    TeethTopHat = 146,
+    TurkeyHat = 147,
+    Eyefro = 148,
+    BaconBandana = 149,
+    AwesomeHat = 150,
+    CardSharkHat = 151,
+    SpringtimeHat = 152,
+    JollyHat = 153,
+    KickoffHat = 154,
+    BeetleHat = 155,
+    BrainHat = 156,
+    BrainiacHat = 157,
+    BucketHat = 158,
+    DesertCrown = 159,
+    CeilingFanHat = 160,
+    ImperialHat = 161,
+    ClownClassicHat = 162,
+    ClownBowlerHat = 163,
+    ColanderHat = 164,
+    KepiHat = 165,
+    CornucopiaHat = 166,
+    CubanoHat = 167,
+    CyclingHat = 168,
+    DaisyCrown = 169,
+    DragonSkull = 170,
+    OutbackHat = 171,
+    LilElfHat = 172,
+    Generalissimo = 173,
+    GarrisonHat = 174,
+    GondolierHat = 175,
+    HuntingHat = 176,
+    JuicerHat = 177,
+    Kokoshnik = 178,
+    MedicHat = 179,
+    MelonHat = 180,
+    MountieHat = 181,
+    NurseHat = 182,
+    PalmHat = 183,
+    PaperboyHat = 184,
+    ParrotNest = 185,
+    OldTimeMovieHat = 186,
+    ClassicPotHat = 187,
+    RadarHat = 188,
+    CrazyLightBulbHat = 189,
+    RubberGloveHat = 190,
+    RugbyHat = 191,
+    SharkfinHat_SharkHat = 192,
+    SleuthHat = 193,
+    ShowerCap = 194,
+    Bobby = 195,
+    HedgehogHat = 196,
+    SteampunkHat = 197,
+    FlightAttendantHat = 198,
+    MondayHat = 199,
+    SherpaHat = 200,
+    TrashLid = 201,
+    TurtleHat = 202,
+    ExtremeVikingHat = 203,
+    ScooterHat = 204,
+    VolcanoIslandHat = 205,
+    SynchronizedSwimmingCap = 206,
+    WilliamTellHat = 207,
+    TribalHat = 208,
+    RudeBoyHat = 209,
+    PorkPieHat = 210,
+    AlarmClockHat = 211,
+    BatterUpHat = 212,
+    HornsBeWithYou = 213,
+    CroissantHat = 214,
+    WeatherVaneHat = 215,
+    RainbowHat = 216,
+    EyeofKaosHat = 217,
+    BatHat = 218,
+    LightBulb = 219,
+    FireflyJar = 220,
+    ShadowGhostHat = 221,
+    LighthouseBeaconHat = 222,
+    TinFoilHat = 223,
+    NightCap = 224,
+    StormHat = 225,
+    GoldArkeyanHelm = 226,
+    ToucanHat = 227,
+    PyramidHat = 228,
+    MiniatureSkylandsHat = 229,
+    WizardHat_TrapTeam_Sorcerer = 230,
+    UnusedHat231 = 231,
+    CandyCaneHat = 232,
+    EggshellHat = 233,
+    CandleHat = 234,
+    DarkHelm = 235,
+    PlanetHat = 236,
+    BellhopHat = 237,
+    BronzeArkeyanHelm = 238,
+    SilverArkeyanHelm = 239,
+    RaverHat = 240,
+    ShireHat = 241,
+    MongolHat = 242,
+    SkipperHat = 243,
+    MedievalBardHat = 244,
+    WoodenHat = 245,
+    CarnivalHat = 246,
+    CoconutHat = 247,
+    ModelHomeHat = 248,
+    IceCreamHat = 249,
+    MolekinMountainHat = 250,
+    SheepwreckedHat = 251,
+    CoreofLightHat = 252,
+    OctaviusCloptimusHat = 253,
+    PaddingHat254 = 254,
+    PaddingHat255 = 255,
+    PaddingHat256 = 256,
+    PaddingHat257 = 257,
+    PaddingHat258 = 258,
+    PaddingHat259 = 259,
+    DiveBomberHat = 260,
+    SeaShadowHat = 261,
+    BurnCycleHeader = 262,
+    ReefRipperHelmet = 263,
+    JetStreamHelmet = 264,
+    SodaSkimmerShowerCap = 265,
+    TombBuggySkullcap = 266,
+    StealthStingerBeanie = 267,
+    SharkTankTopper = 268,
+    GoldRusherCogCap = 269,
+    SplatterSplasherSpires = 270,
+    ThumpTruckersHat = 271,
+    BuzzWingHat = 272,
+    ShieldStrikerHelmet = 273,
+    SunRunnerSpikes = 274,
+    HotStreakHeadpiece = 275,
+    SkySlicerHat = 276,
+    CryptCrusherCap = 277,
+    MagsHat = 278,
+    KaosKrown = 279,
+    EonsHelm = 280
+};
+
+
+enum ID : u24 {
+    INVALID = -1,
+    Whirlwind = 0,
+    SonicBoom = 1,
+    Warnado = 2,
+    LightningRod = 3,
+    Bash = 4,
+    Terrafin = 5,
+    DinoRang = 6,
+    PrismBreak = 7,
+    Sunburn = 8,
+    Eruptor = 9,
+    Ignitor = 10,
+    Flameslinger = 11,
+    Zap = 12,
+    WhamShell = 13,
+    GillGrunt = 14,
+    SlamBam = 15,
+    Spyro = 16,
+    Voodood = 17,
+    DoubleTrouble = 18,
+    TriggerHappy = 19,
+    Drobot = 20,
+    DrillSergeant = 21,
+    Boomer = 22,
+    WreckingBall = 23,
+    Camo = 24,
+    Zook = 25,
+    StealthElf = 26,
+    StumpSmash = 27,
+    DarkSpyro = 28,
+    Hex = 29,
+    ChopChop = 30,
+    GhostRoaster = 31,
+    Cynder = 32,
+    JetVac = 100,
+    Swarm = 101,
+    Crusher = 102,
+    Flashwing = 103,
+    HotHead = 104,
+    HotDog = 105,
+    Chill = 106,
+    Thumpback = 107,
+    PopFizz = 108,
+    Ninjini = 109,
+    Bouncer = 110,
+    Sprocket = 111,
+    TreeRex = 112,
+    Shroomboom = 113,
+    EyeBrawl = 114,
+    FrightRider = 115,
+    AnvilRain = 200,
+    TreasureChest = 201,
+    HealingElixer = 202,
+    GhostSwords = 203,
+    TimeTwister = 204,
+    SkyIronShield = 205,
+    WingedBoots = 206,
+    SparxDragonfly = 207,
+    DragonfireCannon = 208,
+    ScorpionStrikerCatapult = 209,
+    HandOfFate = 230,
+    PiggyBank = 231,
+    RocketRam = 232,
+    TikiSpeaky = 233,
+    DragonsPeak = 300,
+    EmpireOfIce = 301,
+    PirateSeas = 302,
+    DarklightCrypt = 303,
+    VolcanicVault = 304,
+    MirrorOfMystery = 305,
+    NightmareExpress = 306,
+    SunscraperSpire = 307,
+    MidnightMuseum = 308,
+    LegendaryBash = 404,
+    LegendarySpyro = 416,
+    LegendaryTriggerHappy = 419,
+    LegendaryChopChop = 430,
+    Gusto = 450,
+    Thunderbolt = 451,
+    FlingKong = 452,
+    Blades = 453,
+    Wallop = 454,
+    HeadRush = 455,
+    RockyRoll = 456,
+    Wildfire = 457,
+    KaBoom = 458,
+    TrailBlazer = 459,
+    Torch = 460,
+    SnapShot = 461,
+    LobStar = 462,
+    FlipWreck = 463,
+    Blastermind = 464,
+    Enigma = 465,
+    DejaVu = 466,
+    CobraCadabra = 467,
+    Jawbreaker = 470,
+    Gearshift = 471,
+    Chopper = 472,
+    TreadHead = 473,
+    Bushwhack = 474,
+    TuffLuck = 475,
+    FoodFight = 476,
+    HighFive = 477,
+    KryptKing = 478,
+    ShortCut = 479,
+    BatSpin = 480,
+    FunnyBone = 481,
+    KnightLight = 482,
+    Spotlight = 483,
+    KnightMare = 484,
+    Blackout = 485,
+    Bop = 502,
+    Spry = 503,
+    Hijinx = 504,
+    Terrabite = 505,
+    Breeze = 506,
+    Weeruptor = 507,
+    PetVac = 508,
+    SmallFry = 509,
+    Drobit = 510,
+    GillRunt = 514,
+    TriggerSnappy = 519,
+    WhisperElf = 526,
+    Thumpling = 540,
+    MiniJini = 541,
+    EyeSmall = 542,
+    BlastZone = 1004,
+    WashBuckler = 1015,
+    BlastZoneHead = 2004,
+    WashBucklerHead = 2015,
+    Scratch = 3000,
+    PopThorn = 3001,
+    SlobberTooth = 3002,
+    Scorp = 3003,
+    Fryno = 3004,
+    Smolderdash = 3005,
+    BumbleBlast = 3006,
+    ZooLou = 3007,
+    DuneBug = 3008,
+    StarStrike = 3009,
+    Countdown = 3010,
+    WindUp = 3011,
+    RollerBrawl = 3012,
+    GrimCreeper = 3013,
+    RipTide = 3014,
+    PunkShock = 3015
+};
+
+enum Game : u8 {
+    Unknown = -1,
+    Spyros_Adventure,
+    Giants,
+    Swap_Force,
+    Trap_Team,
+    Super_Chargers,
+    Imaginators
+};
+
+enum Deco : s8 {
+    INVALID = -1,
+	Normal = 0,
+	Repose1 = 1,
+	AlternateDeco = 2,
+	Legendary = 3,
+	Event = 4,
+	Repose2 = 5,
+	LightDirect = 6,
+	LightStored = 7,
+	LightEnhanced = 8,
+	Repose3 = 9,
+	Repose4 = 10,
+	Repose5 = 11,
+	Valentines = 12,
+	Easter = 13,
+	Winter = 14,
+	Virtual = 15,
+	Premium = 16,
+	GlowDark = 17,
+	StoneStatue = 18,
+	GlitterSpectrum = 19,
+	TreasureHunt2012 = 20,
+	Halloween = 21,
+	TreasureHunt2013 = 22,
+	ColorShift = 23,
+	WiiU = 24,
+	TH_BestBuy = 25,
+	TH_FritoLay = 26,
+	TreasureHunt2014 = 29,
+	TreasureHunt2015 = 30,
+	Mobile = 31
+};
+
+bitfield Variant {
+    isSupercharger : 1;
+    isLightcore : 1;
+    isFullAltDeco : 1;
+    hasWowPow : 1;
+    Game yearCode : 4;
+};
+
+struct PlayTime {
+
+    u32 totalseconds;
+    u32 hours   = totalseconds / 3600;
+    u8  minutes = (totalseconds % 3600) / 60;
+    u8  seconds = totalseconds % 60;
+    
+    str TimePlayed  = "";
+        if (hours < 10) TimePlayed += "0";
+        if (hours == 0) TimePlayed += "0";
+        std::string::to_string(hours);
+        TimePlayed += ":";
+        if (minutes < 10) TimePlayed += "0";
+        TimePlayed += std::string::to_string(minutes);
+        TimePlayed += ":";
+        if (seconds < 10) TimePlayed += "0";
+        TimePlayed += std::string::to_string(seconds);
+        
+};
+
+fn getLevel(u24 xp2011, u16 xp2012, u32 xp2013) {
+
+    u32 XP = xp2011 + xp2012 + xp2013;
+    u8  Level = 1;
+
+    if (XP >= 197500) {
+        Level = 20;
+    } else if (XP >= 174300) {
+        Level = 19;
+    } else if (XP >= 152600) {
+        Level = 18;
+    } else if (XP >= 1132400) {
+        Level = 17;
+    } else if (XP >= 113700) {
+        Level = 16;
+    } else if (XP >= 96500) {
+        Level = 15;
+    } else if (XP >= 80800) {
+        Level = 14;
+    } else if (XP >= 66600) {
+        Level = 13;
+    } else if (XP >= 53900) {
+        Level = 12;
+    } else if (XP >= 42700) {
+        Level = 11;
+    } else if (XP >= 33000) {
+        Level = 10;
+    } else if (XP >= 24800) {
+        Level = 9;
+    } else if (XP >= 18200) {
+        Level = 8;
+    } else if (XP >= 13000) {
+        Level = 7;
+    } else if (XP >= 9000) {
+        Level = 6;
+    } else if (XP >= 6000) {
+        Level = 5;
+    } else if (XP >= 3800) {
+        Level = 4;
+    } else if (XP >= 2200) {
+        Level = 3;
+    } else if (XP >= 1000) {
+        Level = 2;
+    }
+    
+    return Level;
+
+};
+
+struct Header {
+    u32 SerialNumber;
+    $ = 0x10;
+    ID Skylander;
+    u8 nullByte;
+    u64 TradingCardID;
+    Deco DecoID;
+    Variant VariantID;
+    u16 Checksum;
+    
+};
+
+fn readName() {
+
+    str result;
+    
+    u16 size = 16 + $;
+    
+    for (u8 i = $, i < size, i+=2) {
+        
+        $ = i;
+        char a @ $;
+        if (a != 0) result += a;
+        
+    }
+    
+    $ += 0x10;
+    size = 16 + $;
+    
+    for (u8 i = $, i < size, i+=2) {
+        
+        $ = i;
+        char a @ $;
+        if (a != 0) result += a;
+        
+    }
+    
+    return result;
+
+};
+
+struct SkyFigure {
+
+    Header SkyHeader[[hidden]];
+    
+    ID Skylander = SkyHeader.Skylander[[export]];
+    Deco DecoID = SkyHeader.DecoID[[export]];
+    Variant VariantID = SkyHeader.VariantID[[export]];
+
+    // Trap
+    // Imagine the Villain ID here xD
+    
+    // Skylander
+    $ = 0x80;
+    u24 XP2011;
+    u8  Level2011 = getLevel(XP2011, 0, 0)[[export, hidden]];
+    $ = 0x80 + 0x73 + 0x20;
+    u16 XP2012;
+    u8  Level2012 = getLevel(XP2011, XP2012, 0)[[export, hidden]];
+    $ += 0x3;
+    u32 XP2013;
+    u8  Level2013 = getLevel(XP2011, XP2012, XP2013)[[export]];
+    
+    $ = 0x83;
+    u16 Money;
+    PlayTime timecalc[[hidden]];
+    str TimePlayed = timecalc.TimePlayed[[export]];
+    
+    $ = 0x80 + 0x14;
+    HatID Hat2011;
+    
+    $ = 0xA0;
+    str name = readName()[[export]];
+    
+};
+
+SkyFigure Skylander @ 0x0;
